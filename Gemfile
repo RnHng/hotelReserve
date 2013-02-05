@@ -7,6 +7,8 @@ gem 'rails', '3.2.11'
 
 group :development do
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 
@@ -44,3 +46,16 @@ gem "haml-rails", ">= 0.3.4", :group => :development
 gem "bootstrap-sass", ">= 2.0.4.0"
 gem "will_paginate", ">= 3.0.3"
 gem "therubyracer", :group => :assets, :platform => :ruby
+
+group :test do
+  gem 'capybara'
+  gem 'rb-inotify', '0.8.8'
+  gem 'libnotify', '0.5.9'
+  gem 'guard-spork', '1.2.0'
+  gem 'spork', '0.9.2'
+  gem 'factory_girl_rails', '4.1.0'
+end
+
+group :production do
+  gem 'pg', '0.12.2'
+end
