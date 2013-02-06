@@ -5,16 +5,17 @@
   $( "#reservation_endDate"   ).datepicker();
   });
 %h1 New Reservation
+%h3.center When are you going?
 
 .row
   .span6.offset3
     = form_for(@reservation) do |f|
       = render 'shared/error_messages', object: f.object
 
-      = f.label :startDate, "Start Date", class: 'reservation_forms'
+      = f.label :startDate, "Check-in", class: 'reservation_forms'
       = f.text_field :startDate, class: 'reservation_forms'
 
-      = f.label :endDate, "End Date", class: 'reservation_forms'
+      = f.label :endDate, "Check-out", class: 'reservation_forms'
       = f.text_field :endDate, class: 'reservation_forms'
       
       = f.submit "Reserve me a room!", class: "btn btn-large btn-primary"
