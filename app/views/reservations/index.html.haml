@@ -1,1 +1,14 @@
 %h1 Your Reservations
+- if @reservations.any?
+  - @reservations.each do |reservation|
+    %section
+      %p Check-in
+      %p= @reservation.startDate
+      %p Check-out
+      %p= @reservation.endDate
+      %p Room Description
+      %p @reservation.room.description
+      = link_to "delete?", reservation, method: :delete, data: { confirm: "You sure?" }
+- else
+  %section
+    %h3.center No reservations yet!
