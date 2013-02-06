@@ -12,6 +12,7 @@
 
 class Reservation < ActiveRecord::Base
   attr_accessible :startDate, :endDate
+  has_many :rooms
 
   validates :room_id, presence: true
   validates :startDate, presence: true
