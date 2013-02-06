@@ -1,3 +1,6 @@
 -#= provide(:title, 'Home')
-%h1 HotelReserve
-%p HotelReserve: for when you don't actually need a real reservation
+.center.hero-unit
+  %h1 HotelReserve
+  %h2 for when you don't actually need a real reservation
+
+  = link_to "Make a reservation!", reserve_path, class: "btn btn-large btn-primary"
